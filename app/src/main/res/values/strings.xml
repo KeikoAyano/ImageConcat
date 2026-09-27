@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">ImageConcat</string>
+    <string name="pick_image">Pick Image</string>
+    <string name="concat_image">Concat Image</string>
+    <string name="image_item">image item</string>
+    <string name="label_images">Images Candidates</string>
+    <string name="vertical">Vertical</string>
+    <string name="horizontal">Horizontal</string>
+    <string name="image_out">Placehold Image, the output image</string>
+
+    <string name="warn_dialog">WARNING</string>
+    <string name="info_dialog">INFO</string>
+    <string name="cancel_dialog">User Click Cancel!</string>
+    <string name="image_duplicate">The image is Duplicated!</string>
+    <string name="img_same_shape">Images must of same shape to be processed with OpenCV</string>
+    <string name="no_image_warning">NO Image in the candidates</string>
+    <string name="cacel_msg">User click cancel</string>
+    <string name="OpenCVInitError">OpenCV Init Error</string>
+    <string name="MaxItemNumPrompt">Exceed Max number of items</string>
+</resources>

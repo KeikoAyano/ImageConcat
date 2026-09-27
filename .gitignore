@@ -1,0 +1,24 @@
+*.iml
+.gradle
+.idea/
+/local.properties
+.DS_Store
+build/*
+/captures
+.externalNativeBuild
+.cxx
+.kotlin/
+gradle/*
+
+# apk generated folder
+app/build/
+app/release/
+
+# Local properties (e.g., Android local settings)
+local.properties
+
+# Temporary or backup files
+*.tmp
+*.bak
+*.swp
+*~.nib

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <GridLayout
+        android:id="@+id/button_section"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:orientation="horizontal"
+        android:paddingStart="40dp"
+        android:paddingEnd="40dp"
+        >
+        <Button
+            android:id="@+id/pick_image"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_columnWeight="1"
+            android:text="@string/pick_image"
+            />
+        <Button
+            android:id="@+id/concat_image"
+            android:layout_marginStart="8dp"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_height="60dp"
+            android:text="@string/concat_image"
+            />
+    </GridLayout>
+
+
+    <RadioGroup
+        android:id="@+id/concat_orientation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/button_section"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+        <RadioButton android:id="@+id/radio_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/horizontal"/>
+        <RadioButton android:id="@+id/radio_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/vertical"/>
+    </RadioGroup>
+
+    <ImageView
+        android:contentDescription="@string/image_out"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:paddingStart="40dp"
+        android:paddingEnd="40dp"
+        android:id="@+id/output_img"
+        android:src="@drawable/graphics_picture"
+        android:longClickable="true"
+        android:focusable="true"
+        android:clickable="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_section"
+        android:layout_marginTop="40dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/label_images"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/output_img"
+        android:text="@string/label_images"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        android:layout_marginStart="20dp"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/label_images"
+        android:id="@+id/images_display"
+        android:layout_marginTop="20dp"
+        android:paddingStart="40dp"
+        android:paddingEnd="40dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
